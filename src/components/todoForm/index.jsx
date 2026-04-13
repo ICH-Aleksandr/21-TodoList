@@ -28,9 +28,9 @@ const TodoForm = () => {
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Введите задачу"
+        placeholder="Enter new todo"
       />
-      <button type="submit">Добавить</button>
+      <button type="submit">Add Todo</button>
     </form>
   );
 };
