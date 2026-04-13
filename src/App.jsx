@@ -1,9 +1,12 @@
 import "./App.css";
+import TodoList from "./components/todoList";
+import TodoForm from "./components/todoForm";
 
 function App() {
   return (
     <div>
-      <h1>Todo List</h1>
+      <TodoForm />
+      <TodoList />
     </div>
   );
 }
