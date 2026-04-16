@@ -1,9 +1,12 @@
 import "./App.css";
+import TodoList from "./components/todoList";
+import TodoForm from "./components/todoForm";
 
 function App() {
   return (
-    <div>
-      <h1>Todo List</h1>
+    <div style={{ maxWidth: "600px", margin: "40px auto", padding: "0 16px" }}>
+      <TodoForm />
+      <TodoList />
     </div>
   );
 }
