@@ -4,7 +4,7 @@ import TodoForm from "./components/todoForm";
 
 function App() {
   return (
-    <div>
+    <div style={{ maxWidth: "600px", margin: "40px auto", padding: "0 16px" }}>
       <TodoForm />
       <TodoList />
     </div>

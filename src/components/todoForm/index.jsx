@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../../redux/slices/todosSlice";
+import styles from "./styles.module.css";
 
 const TodoForm = () => {
   const [text, setText] = useState("");
@@ -23,14 +24,17 @@ const TodoForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <input
+        className={styles.input}
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Enter new todo"
       />
-      <button type="submit">Add Todo</button>
+      <button className={styles.button} type="submit">
+        Add Todo
+      </button>
     </form>
   );
 };

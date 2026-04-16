@@ -1,0 +1,46 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.text {
+  flex: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.completeBtn {
+  padding: 6px 12px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.completeBtn:hover {
+  background-color: #1e88e5;
+}
+
+.deleteBtn {
+  padding: 6px 12px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background-color: #e53935;
+}

@@ -1,20 +1,29 @@
 import { useDispatch } from "react-redux";
 import { toggleTodo, deleteTodo } from "../../redux/slices/todosSlice";
+import styles from "./styles.module.css";
 
 const TodoItem = ({ todo }) => {
   const dispatch = useDispatch();
 
   return (
-    <li>
+    <li className={styles.item}>
       <span
-        style={{ textDecoration: todo.completed ? "line-through" : "none" }}
+        className={`${styles.text} ${todo.completed ? styles.completed : ""}`}
       >
         {todo.text}
       </span>
-      <button onClick={() => dispatch(toggleTodo(todo.id))}>
+      <button
+        className={styles.completeBtn}
+        onClick={() => dispatch(toggleTodo(todo.id))}
+      >
         {todo.completed ? "Undo" : "Complete"}
       </button>
-      <button onClick={() => dispatch(deleteTodo(todo.id))}>Delete</button>
+      <button
+        className={styles.deleteBtn}
+        onClick={() => dispatch(deleteTodo(todo.id))}
+      >
+        Delete
+      </button>
     </li>
   );
 };
